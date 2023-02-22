@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="assets/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+    <title>Producto</title>
+</head>
+<body>
+   <form action="Mensaje.html" class="needs-validation" novalidate>
+    <table border="1px" cellpadding="5px" cellspacing="0">
+        <tbody>
+            <tr>
+                <th colspan="2">Registro de producto</th>
+            </tr>
+            <tr>
+                <td for="validationCustom01" class="form-label">Codigo:</td>
+                <td class="input-group has-validation">
+                    <input type="number" class="form-control" id="validationCustom01" required>
+                    <div class="invalid-feedback">
+                        Por favor, digite el codigo del producto.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom02" class="form-label">Descripcion:</td>
+                <td class="input-group has-validation">
+                    <textarea class="form-control" id="validationCustom02" aria-describedby="inputGroupPrepend" cols="20" rows="5" required></textarea>
+                    <div class="invalid-feedback">
+                        Por favor, agrege una descripcion.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom03" class="form-label">Codigo de barra:</td>
+                <td class="input-group has-validation">
+                    <input type="number" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                        Por favor, digite el codigo de barra del producto.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom04" class="form-label">Precio Unitario:</td>
+                <td class="input-group has-validation">
+                    <input type="number" class="form-control" id="validationCustom04" required>
+                    <div class="invalid-feedback">
+                        Por favor, digite el precio unitario.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom05" class="form-label">Stock:</td>
+                <td class="input-group has-validation">
+                    <input type="number" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Por favor, agrege la cantidad de producto.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom06" class="form-label">Proveedor:</td>
+                <td class="input-group has-validation">
+                    <input type="text" class="form-control" id="validationCustom06" required>
+                    <div class="invalid-feedback">
+                        Por favor, digite un proveedor.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom07" class="form-label">Estado:</td>
+                <td>
+                    <input  class="form-check-input" type="checkbox" value="" id="invalidCheck" required>Activo
+                    <div class="invalid-feedback">
+                    Por favor, marque la casilla activo.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td for="validationCustom09" class="form-label">Categoria:</td>
+                <td>
+                    <select class="form-select" id="validationCustom09" required>
+                        <option selected disabled value=""></option>
+                        <option>Categoria 1</option>
+                        <option>Categoria 2</option>
+                        <option>Categoria 3</option>
+                        <option>Categoria 4</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, seleccione una categoria.
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Guardar"></td>
+                <td><input type="reset" value="Cancelar"></td>
+            </tr>       
+        </tbody>
+    </table>
+   </form>
+   <script>
+    // Ejemplo de JavaScript inicial para deshabilitar el envío de formularios si hay campos no válidos
+(function () {
+  'use strict'
+
+  // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Bucle sobre ellos y evitar el envío
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+   </script>
+</body>
+</html>
